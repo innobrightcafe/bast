@@ -15,8 +15,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
 
-// Map of links to display in the side navigation.
-// Depending on the size of the application, this would be stored in a database.
+// Map of links to display in the side navigation. Each link has a name, href, and icon.
 const links = [
   { name: 'Home', href: '/dashboard', icon: HomeIcon },
   {
@@ -56,9 +55,9 @@ export default function NavLinks() {
             key={link.name}
             href={link.href}
             className={clsx(
-              'flex h-[48px] grow items-center justify-center gap-2 rounded-md bg-gray-100 p-3 text-sm font-medium hover:bg-[#ff4300] hover:text-gray-200 md:flex-none md:justify-start md:p-2 md:px-3',
+              'flex h-[48px] grow items-center justify-center gap-2 rounded-md bg-gray-50 p-3 text-sm font-medium hover:bg-[#343A40] hover:text-[#FF4300] md:flex-none md:justify-start md:p-2 md:px-3',
               {
-                'bg-[#ff4300] text-gray-200': pathname === link.href,
+                'bg-[#FF4308] text-gray-100': pathname === link.href,
               },
             )}
           >
